@@ -1,6 +1,7 @@
 angular.module('gooTube', ['ui.router'])
 
   .config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/404');
 
     $stateProvider
       .state('home', {
@@ -24,8 +25,7 @@ angular.module('gooTube', ['ui.router'])
         controller: 'clockCtrl'
       })
 
-      // $state.go('home')
-        $urlRouterProvider.otherwise('/');
+
   })
 
   // $(function() {

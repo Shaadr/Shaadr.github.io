@@ -7,7 +7,7 @@ angular.module('gooTube')
     gapi.client.load('youtube', 'v3', function() {
       var request = gapi.client.youtube.search.list({
         part: 'snippet',
-        q: $('#query').val();
+        q: $('#query').val(),
         order:'date',
         type:'video'
       });
