@@ -5,24 +5,29 @@
     <title>Goo Tube</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/style.scss">
-
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Creepster|Kavoon|Nosifer|Shrikhand" rel="stylesheet">
   </head>
   <body>
-    
+
+
     <ui-view>
     </ui-view>
 
     <footer>
-      <p>Copyright &copy; 2016, All Rights Reserved </p>
+      <p class="footerText">Copyright &copy; 2016, All Rights Reserved </p>
     </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=init"></script>
   <script src="./js/app.js"></script>
   <script src="./js/controllers/homeCtrl.js"></script>
   <script src="./js/controllers/searchCtrl.js"></script>
   <script src="./js/directives/headerDirective.js"></script>
+  <script src="./js/controllers/404Ctrl.js"></script>
+  <script src="./js/directives/searchBarDirective.js"></script>
+  <script src="./js/controllers/searchBarCtrl.js"></script>
   </body>
 </html>
