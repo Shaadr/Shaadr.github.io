@@ -1,24 +1,19 @@
 angular.module('gooTube')
 .service('mainServ', function($http, $q){
 
-  var deferred = $q.defer();
-  this.googleApiClientReady = function() {
-    gapi.client.setApiKey('AIzaSyAnq1Bc7Tj9uknrfNaOUGiu4O-JaYwDnKM');
-    gapi.client.load('youtube', 'v3', function() {
-      var request = gapi.client.youtube.search.list({
-        part: 'snippet',
-        q: $('#query').val(),
-        order:'date',
-        type:'video'
-      });
-      requst.execute(function(response) {
-        deferred.reslove(response.result);
-      })
+
+// this.search = function() {
+  this.q = $('#query').val();
+  this.getClips = function(){
+    return $http({
+      method: "GET",
+      url: "https://www.googleapis.com/youtube/v3/search?part=snippet&q=q&type=video&key=AIzaSyAnq1Bc7Tj9uknrfNaOUGiu4O-JaYwDnKM"
+  			// key: 'AIzaSyAnq1Bc7Tj9uknrfNaOUGiu4O-JaYwDnKM'},
+    }).then(function(response){
+      // console.log(response.data)
+      return response.data;
     })
-    return deferred.promise;
   }
-
-
-
+// }
 
 })

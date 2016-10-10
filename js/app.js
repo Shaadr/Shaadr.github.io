@@ -28,27 +28,4 @@ angular.module('gooTube', ['ui.router'])
 
   })
 
-  // $(function() {
-  //   $("form").on('submit', function(e) {
-  //     e.preventDefault();
-  //     //prepare request
-  //     var resquest = gapi.client.youtube.search.list({
-  //       part: "snippet",
-  //       type: 'video',
-  //       q: encodeURIComponent($('search').val()).replace(/$20/g, "+"),
-  //       maxResults: 8,
-  //       order: "viewCount"
-  //     })
-  //     //execute the resquest
-  //     request.execute(function(response) {
-  //       console.log(response)
-  //     })
-  //   })
-  // })
-  //
-  // function init() {
-  //   gapi.client.setApiKey('AIzaSyAnq1Bc7Tj9uknrfNaOUGiu4O-JaYwDnKM');
-  //   gapi.client.load('youtube', 'v3', function() {
-  //     //youtube api is ready
-  //   })
-  // }
+  

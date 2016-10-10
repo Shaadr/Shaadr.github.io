@@ -1,24 +1,42 @@
 'use strict';
 
-function init() {
-  window.initGapi(); //calls init func defined on window
-}
 
   angular.module('gooTube')
-  .controller('searchBarCtrl', function($scope, $window, $sce, mainServ) {
+  .controller('searchBarCtrl', function($scope, mainServ) {
 
-    $window.initGapi = function() {
-      $scope.$apply($scope.getChannel);
-    };
 
-    $scope.getVideos = function() {
-      mainServ.googleApiClientReady().then(function(data) {
-        $scope.video = data;
-      }, function(error) {
-        conosle.log('Failed: ' + error)
-      })
+      $scope.vids = function(){
+        mainServ.getClips().then(function(response) {
+          console.log(response);
+          $scope.movies = response.items;
+        })
+        console.log($scope.videos)
       }
 
-      
+
+  $scope.getOutput = function(item){
+	$scope.title = item.snippet.title;
+	$scope.description = item.snippet.description;
+	$scope.thumb = item.snippet.thumbnails.high.url;
+	$scope.channelTitle = item.snippet.channelTitle;
+	$scope.videoDate = item.snippet.publishedAt;
+
+	// Build Output String
+	var output = '<li>' +
+	'<div class="list-left">' +
+	'<img src="'+thumb+'">' +
+	'</div>' +
+	'<div class="list-right">' +
+	'<h3><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/'+videoId+'">'+title+'</a></h3>' +
+	'<small>By <span class="cTitle">'+channelTitle+'</span> on '+videoDate+'</small>' +
+	'<p>'+description+'</p>' +
+	'</div>' +
+	'</li>' +
+	'<div class="clearfix"></div>' +
+	'';
+
+	return output;
+}
+
 
 })

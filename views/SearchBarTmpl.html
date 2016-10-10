@@ -1,11 +1,14 @@
 <section>
-				<form id="search-form" name="search-form" onsubmit="return search()">
+				<form id="search-form" name="search-form" ng-submit="return search()">
 					<div class="fieldcontainer">
 						<input type="search" id="query" class="search-field" placeholder="Search YouTube...">
-						<input type="submit" name="search-btn" id="search-btn" value="">
+						<input ng-click="vids()" type="submit" name="search-btn" id="search-btn">
 					</div>
 				</form>
 
-				<ul id="results"></ul>
+				<ul ng-repeat='movie in movies' id="results">
+					<li>{{movie}}</li>
+				</ul>
 				<div id="buttons"></div>
+				<!-- <button ng-click="vids()">PRESS ME TO BREAK THE P{AGE}</button> -->
 </section>
