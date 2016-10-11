@@ -27,5 +27,3 @@ angular.module('gooTube', ['ui.router'])
 
 
   })
-
-  

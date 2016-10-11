@@ -77,7 +77,7 @@ $hamburger-spacing:8px;
   transform:translate3d(0,$hamburger-spacing,0);
 }
 .menu-open:checked+.menu-open-button{
-  .hamburger-1{
+  .hamburger-1{li
     transform:translate3d(0,0,0) rotate(45deg);
   }
   .hamburger-2{

@@ -10,15 +10,28 @@
     <link href="https://fonts.googleapis.com/css?family=Chewy|Creepster|Kavoon|Nosifer|Shrikhand" rel="stylesheet">
   </head>
   <body>
+    <div class="time-container" ng-controller="clockCtrl">
 
+      <section class="dates">
+        {{dates}}
+      </section>
+
+      <h2 class="time">Share the <span>'Goo'</span>d Times!!</h1>
+
+      <section class="time">
+        {{time}}
+      </section>
+    </div>
 
     <ui-view>
     </ui-view>
+
 
     <footer>
       <p class="footerText">Copyright &copy; 2016, All Rights Reserved </p>
     </footer>
 
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js'></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
@@ -30,6 +43,7 @@
   <script src="./js/controllers/searchCtrl.js"></script>
   <script src="./js/directives/headerDirective.js"></script>
   <script src="./js/controllers/404Ctrl.js"></script>
+  <script src="./js/controllers/clockCtrl.js"></script>
   <script src="./js/directives/searchBarDirective.js"></script>
   <script src="./js/controllers/searchBarCtrl.js"></script>
 
