@@ -1,7 +1,7 @@
 <section>
 				<form id="search-form" name="search-form" ng-submit="vids(searchText)">
 					<div class="fieldcontainer">
-						<input type="search" id="query" class="search-field" placeholder="Search YouTube..." ng-model="searchText">
+						<input type="search" id="query" class="search-field" placeholder="Search Goovies..." ng-model="searchText">
 						<button type="submit" name="search-btn" id="search-btn"></button>
 					</div>
 				</form>
@@ -11,11 +11,14 @@
 					<!-- {{movie.snippet.thumbnails.default.url}} -->
 
 					<ul>
-						<a href= "https://www.youtube.com/watch?v={{movie.id.videoId}}">{{movie.snippet.title}}</a>
-						<li class="description">
-							by <span>{{movie.snippet.channelTitle}}</span> </br>
-							{{movie.snippet.description}}
-						</li>
+						<div class="vidTitle">
+							<a href="https://www.youtube.com/watch?v={{movie.id.videoId}}">{{movie.snippet.title}}</a>
+
+							<li class="description">
+								by <a class="channelTitle" href="https://www.youtube.com/channel/{{movie.snippet.channelId}}"><span>{{movie.snippet.channelTitle}}</span> </a> </br>
+								{{movie.snippet.description}}
+							</li>
+					</div>
 					</ul>
 			</div>
 

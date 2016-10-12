@@ -7,7 +7,7 @@
 
 .time-container {
   width: 100%;
-  height: 7 vh;
+  height: 7vh;
   background: black;
   display: flex;
   justify-content: space-around;
@@ -44,8 +44,8 @@ body {
 
 section h1{
 	color:#000;
-	margin-bottom:5px;
-  margin-top: 0px;
+	margin-bottom:30px;
+  padding-top: 30px;
   /*font-family: 'Shrikhand', cursive;*/
   /*font-family: 'Chewy', cursive;*/
   /*font-family: 'Kavoon', cursive;*/
@@ -61,9 +61,9 @@ section h1{
     /*font-family: 'Chewy', cursive;*/
     /*font-family: 'Kavoon', cursive;*/
     /*font-family: 'Creepster', cursive;*/
-    font-family: 'Nosifer', cursive;
+    /*font-family: 'Nosifer', cursive;*/
     text-align: center;
-    letter-spacing: 1px
+    letter-spacing: 1px;
   }
 
   .notFound{
@@ -79,7 +79,7 @@ section h1{
     font-size: 35px;
     font-weight: bold;
     letter-spacing: 1px;
-    width: 30%
+    width: 30%;
 
   }
 
@@ -88,11 +88,12 @@ section h1{
   }
 
 span {
-  color: #CC161C
+  color: #CC161C;
+
 }
 
 p {
-  color:#000
+  color:#000;
 }
 
 a {
@@ -184,16 +185,22 @@ h1 {
 
 .menu {
   position: absolute;
-  left: 50%;
-  margin-left: -190px;
-  padding-top: 20px;
-  padding-left: 190px;
-  width: 380px;
-  height: 250px;
+  left: 32%;
+  /*margin-left: -190px;*/
+  /*padding-top: 20px;*/
+  /*padding-left: 190px;*/
+  /*width: 380px;*/
+  /*height: 250px;*/
   box-sizing: border-box;
   display: flex;
   font-size: 20px;
-  text-align: left;
+  /*text-align: left;*/
+  width: 570px;
+  height: 270px;
+  padding-left: 0px;
+  padding-top: 0px;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-item:hover {
@@ -283,15 +290,18 @@ h1 {
 
 .searchResults {
   display: flex;
-  /*justify-content: space-around;*/
+  justify-content: space-between;
+  text-align: center;
   align-items: center;
   color: black;
   text-align: right;
-  font-family: 'Chewy', cursive;
+  /*font-family: 'Chewy', cursive;*/
+  font-family: ariel;
   letter-spacing: 1px;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 35px;
   border-top: 2px solid black;
+  border-bottom: 2px solid black;
   margin-right: 5%;
   margin-left: 5%;
   padding: 15px;
@@ -301,15 +311,25 @@ h1 {
 
 .searchResults a {
   text-decoration: none;
-  text-align: right;
+  /*text-align: center;;*/
   width: 74%;
   margin-top: 10px;
   margin-bottom: 10px;
+}
 
+.vidTitle {
+  text-align: center;
+  color: #4092D0;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+.channelTitle {
+  text-decoration: none;
 }
 
 a:hover {
-  color: blue;
+  text-decoration: underline;
 }
 
 .thumbnail {
@@ -323,7 +343,8 @@ a:hover {
 
 .description {
   font-size: 15px;
-  font-family: fantasy;
+  /*font-family: fantasy;*/
+  color: #767676
 }
 
 
@@ -336,8 +357,8 @@ a:hover {
 	display:flex;
   justify-content: center;
   padding-top: 20px;
-  padding-bottom: 20px
-	width:90%;
+  padding-bottom: 20px;
+	width:100%;
 	margin: 0 auto;
 }
 
@@ -346,10 +367,10 @@ a:hover {
 	-wedkit-box-size:border-box;
 	box-size:border-box;
 	display:block;
-	width:45%;
+	width:70%;
 	padding:11px 7px;
 	padding-right:43px;
-	background:#fff;
+	background:white;
 	color:#ccc;
 	border:1px solid #c8c8c8;
 	font-size:1.6em;
@@ -411,7 +432,7 @@ a:hover {
 }
 
 .paging-button{
-	background:#f4f4f4;
+	background:#F1F1F1;
 	padding: 8px 13px;
 	border: #ccc 1px solid;
 	border-radius: 5px;
@@ -423,6 +444,6 @@ a:hover {
 
 footer{
 	padding: 20px;
-	background:#f4f4f4;
+	background:#F1F1F1;
 	text-align:center;
 }
