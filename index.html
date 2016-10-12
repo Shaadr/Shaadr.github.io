@@ -3,21 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Goo Tube</title>
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/style.scss">
-    <link rel="stylesheet" href="./styles/style.css">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./public/styles/style.scss">
+    <link rel="stylesheet" href="./public/styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Chewy|Creepster|Kavoon|Nosifer|Shrikhand" rel="stylesheet">
+
   </head>
   <body>
+    
     <div class="time-container" ng-controller="clockCtrl">
-
       <section class="dates">
         {{dates}}
       </section>
-
       <h2 class="time">Let the <span>'Goo'</span>d Times Roll</h1>
-
       <section class="time">
         {{time}}
       </section>
@@ -26,26 +25,18 @@
     <ui-view>
     </ui-view>
 
-
     <footer>
       <p class="footerText">Copyright &copy; 2016, All Rights Reserved </p>
     </footer>
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js'></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-  <script src="https://apis.google.com/js/client.js?onload=init"></script>
-  <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
-  <script src="./js/app.js"></script>
-  <script src='./js/mainService.js'></script>
-  <script src="./js/controllers/homeCtrl.js"></script>
-  <script src="./js/controllers/searchCtrl.js"></script>
-  <script src="./js/directives/headerDirective.js"></script>
-  <script src="./js/controllers/404Ctrl.js"></script>
-  <script src="./js/controllers/clockCtrl.js"></script>
-  <script src="./js/directives/searchBarDirective.js"></script>
-  <script src="./js/controllers/searchBarCtrl.js"></script>
-
+    <!-- Scripts -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+    <script src="./public/app/app.js"></script>
+    <script src="./public/bundle.js"
   </body>
 </html>
