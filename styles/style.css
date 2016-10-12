@@ -281,6 +281,51 @@ h1 {
           transform: translate3d(-114.40705px, 11.66307px, 0);
 }
 
+.searchResults {
+  display: flex;
+  /*justify-content: space-around;*/
+  align-items: center;
+  color: black;
+  text-align: right;
+  font-family: 'Chewy', cursive;
+  letter-spacing: 1px;
+  font-size: 20px;
+  line-height: 35px;
+  border-top: 2px solid black;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding: 15px;
+  /*font-family: serif;*/
+
+}
+
+.searchResults a {
+  text-decoration: none;
+  text-align: right;
+  width: 74%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+a:hover {
+  color: blue;
+}
+
+.thumbnail {
+  width: 15%;
+  float: left;
+  margin-left: 5%;
+  margin-bottom: 2.5%;
+  margin-top: 2.5%;
+  text-align: center;
+}
+
+.description {
+  font-size: 15px;
+  font-family: fantasy;
+}
+
 
 #search-form{
 	display:block;

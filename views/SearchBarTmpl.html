@@ -1,14 +1,24 @@
 <section>
-				<form id="search-form" name="search-form" ng-submit="return search()">
+				<form id="search-form" name="search-form" ng-submit="vids(searchText)">
 					<div class="fieldcontainer">
-						<input type="search" id="query" class="search-field" placeholder="Search YouTube...">
-						<input ng-click="vids()" type="submit" name="search-btn" id="search-btn">
+						<input type="search" id="query" class="search-field" placeholder="Search YouTube..." ng-model="searchText">
+						<button type="submit" name="search-btn" id="search-btn"></button>
 					</div>
 				</form>
+				<div ng-repeat='movie in movies' class="searchResults">
+					<!-- <img href="https://www.youtube.com/watch?v={{movie.id.videoId}}"class="thumbnail" ng-src="{{movie.snippet.thumbnails.default.url}}"/> -->
+					<iframe  class=width="440" height="160" src="https://www.youtube.com/embed/"+{{movie.id.videoId}} frameborder="0" allowfullscreen></iframe>
+					<!-- {{movie.snippet.thumbnails.default.url}} -->
 
-				<ul ng-repeat='movie in movies' id="results">
-					<li>{{movie}}</li>
-				</ul>
+					<ul>
+						<a href= "https://www.youtube.com/watch?v={{movie.id.videoId}}">{{movie.snippet.title}}</a>
+						<li class="description">
+							by <span>{{movie.snippet.channelTitle}}</span> </br>
+							{{movie.snippet.description}}
+						</li>
+					</ul>
+			</div>
+
 				<div id="buttons"></div>
 				<!-- <button ng-click="vids()">PRESS ME TO BREAK THE P{AGE}</button> -->
 </section>
